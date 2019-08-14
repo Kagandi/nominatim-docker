@@ -83,7 +83,7 @@ RUN chmod a+x ${USERHOME}
 USER nominatim
 ARG REPLICATION_URL=https://planet.osm.org/replication/hour/
 WORKDIR /srv/nominatim
-RUN git clone --recursive git://github.com/openstreetmap/Nominatim.git
+RUN git clone --recursive https://github.com/openstreetmap/Nominatim.git
 RUN echo $'<?php\n\
       # Paths
       @define('CONST_Postgresql_Version', '${PGSQL_VERSION}'); \n\
